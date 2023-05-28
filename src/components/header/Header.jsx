@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import "./Header.css";
 import Button from "../UI/Button/Button.jsx";
 import "../UI/Button/Button.css";
-import youAreNotAloneHeader from "../../assets/HeaderHero.png";
+import HeaderHero from "../../assets/HeaderHero.png";
+import youAreNotAloneHeader from "../../assets/youarenotalone1.png";
 import { BsMouse } from "react-icons/bs";
 
 import AOS from "aos";
@@ -14,6 +15,22 @@ const Header = () => {
       duration: 1000,
     });
   }, []);
+
+  const [HeaderPic,setHeader]=useState(youAreNotAloneHeader)
+
+      useEffect(()=>
+      {
+        let x =Math.floor(Math.random()*15)
+        if(x%2==0)
+        {
+           setHeader(HeaderHero)
+        }
+        else
+        {
+          setHeader(youAreNotAloneHeader)
+        }
+      })
+
   return (
     <section id="header">
       <div className="container header">
@@ -25,8 +42,8 @@ const Header = () => {
             <span>You are Heard</span>
           </h1>
           <p className="u-text-small">
-            FANCIED STORY NETWORK (FSN) is an upcoming social
-            movement which was formed on March 3rd 2022.The movement
+            FANCIED STORY NETWORK (FSN) is a social
+            movement which was formed on February 3rd 2022.The movement
             was formed initially as a form of self-expression on the lack of
             awareness on the general mental health state of our society on a
             day-to-day basis.It is steadily growing both locally and
@@ -39,14 +56,15 @@ const Header = () => {
           </div>
         </div>
         <div className="header-right" data-aos="fade-left">
-          <img src={youAreNotAloneHeader} alt="You are not Alone" />
+          <img src={HeaderPic} alt="You are not Alone" />
         </div>
       </div>
       <div className="floating-icon">
-        <a href="#features">
+        <a href="#LearnMore">
           <BsMouse color="#fff" size={25} className="mouse" />
         </a>
       </div>
+      <br/><br/>
     </section>
   );
 };

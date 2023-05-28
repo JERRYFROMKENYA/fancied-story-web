@@ -5,3 +5,5 @@ export { default as Download } from "./download/Download.jsx";
 export { default as Subscribe } from "./subscribe/Subscribe.jsx";
 export { default as Faq } from "./faq/Faq.jsx";
 export { default as Footer } from "./footer/Footer.jsx";
+export { default as Strip} from "./strip/Strip.jsx"
+export {default as  Slideshow} from "./Slideshow/Slideshow.jsx"

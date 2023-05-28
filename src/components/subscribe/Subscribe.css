@@ -23,8 +23,8 @@ form > * {
 
 form input {
   padding: 1rem;
-  background: transparent;
-  border: 1px solid #777;
+  background: rgba(0, 0, 0, 0.51);
+  border: 1px solid rgba(119, 119, 119, 0.63);
   border-radius: 5px 0 0 5px;
   color: #fff;
   outline: none;
@@ -36,10 +36,11 @@ form button {
   padding: 1rem;
   background: var(--form-button);
   border: 1px solid var(--form-button);
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px 5px 5px 5px;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top:12px ;
 }
 
 .social-icons {
@@ -64,7 +65,8 @@ form button {
 }
 
 .social-icon:hover {
-  background: var(--light-blue);
+  background: var(--new-pink);
+  color: #2da5ff;
 }
 
 @media screen and (max-width: 600px) {
